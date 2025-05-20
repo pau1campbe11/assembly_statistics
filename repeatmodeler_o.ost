@@ -13,6 +13,12 @@
 #SBATCH --mail-user=p.campbell.5@research.gla.ac.uk
 #SBATCH --mail-type=ALL
 
+############# LOADING MODULES #############
+
+module load apps/miniforge
+conda activate busco_5.8.2
+
+
 ### Code section
 
 mkdir -p logs
