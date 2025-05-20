@@ -16,7 +16,7 @@
 ############# LOADING MODULES #############
 
 module load apps/miniforge
-conda activate busco_5.8.2
+conda activate repeatmodeler_2.0.6
 
 
 ### Code section
