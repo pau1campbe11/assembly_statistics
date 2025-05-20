@@ -23,6 +23,6 @@ conda activate repeatmodeler_2.0.6
 
 mkdir -p logs
 
-BuildDatabase -name o.ostertagia_db -engine ncbi /users/2320707c/project0005/for_paul_oster/ref_genomes/GCA_964213955.1_nxOstOste4.1_genomic.fna
+BuildDatabase -name o.ostertagia_db /users/2320707c/project0005/for_paul_oster/ref_genomes/GCA_964213955.1_nxOstOste4.1_genomic.fna
 
-RepeatModeler -database o.ostertagia_db -pa 15 -LTRStruct > out.log
+RepeatModeler -database o.ostertagia_db -threads 15 -LTRStruct > out.log
