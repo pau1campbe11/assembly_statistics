@@ -25,4 +25,4 @@ mkdir -p logs
 
 BuildDatabase -name c.oncophora_db /users/2320707c/project0005/for_paul_oster/ref_genomes/nxCooOnco1_draft.fa
 
-RepeatModeler -database c.oncophora_db -threads 15 -LTRStruct >& run.out &
+RepeatModeler -database c.oncophora_db -threads 15 -LTRStruct > out.log
