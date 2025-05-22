@@ -18,9 +18,9 @@ module load apps/miniforge
 conda activate repeatmasker_4.1.5
 
 ################# INPUTS #################
-GENOME=/users/2320707c/project0005/for_paul_oster/ref_genomes/nxCooOnco1_draft.fa
-REPEAT_LIBRARY=/users/2320707c/project0005/for_paul_oster/ref_genomes/repeatm/o.ostertagia_db-families.fa
-OUTDIR=/users/2320707c/project0005/for_paul_oster/ref_genomes/repeatm/oster_repeat_out
+GENOME=/users/2320707c/project0005/for_paul_oster/ref_genomes/GCA_964213955.1_nxOstOste4.1_genomic.fna
+REPEAT_LIBRARY=/users/2320707c/project0005/for_paul_oster/ref_genomes/repeatm/rmod_oost/ 
+OUTDIR=/users/2320707c/project0005/for_paul_oster/ref_genomes/repeatm/rmask_oost
 
 mkdir -p ${OUTDIR}
 
@@ -32,6 +32,12 @@ RepeatMasker \
   -gff \
   -dir ${OUTDIR} \
   -a \
+  -s \
+  -poly \
+  -small \
   -html \
   -e ncbi \
   ${GENOME}
+
+
+  
