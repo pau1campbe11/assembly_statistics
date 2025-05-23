@@ -5,7 +5,7 @@
 #SBATCH --job-name=repeatmask_dviv      # Descriptive job name
 #SBATCH --output=%x-%J.out                 # Output file with job name and ID
 #SBATCH --error=%x-%J.err                  # Error file
-#SBATCH --time=0-04:00:00                  # Max wall time
+#SBATCH --time=0-10:00:00                  # Max wall time
 #SBATCH --mem=20G                          # Total memory per node
 #SBATCH --ntasks=1                         # One SLURM task
 #SBATCH --cpus-per-task=12                 # Use 16 cores for RepeatMasker
@@ -27,7 +27,7 @@ mkdir -p ${OUTDIR}
 ################ RUN REPEATMASKER ################
 
 RepeatMasker \
-  -pa 16 \
+  -pa 12 \
   -lib ${REPEAT_LIBRARY} \
   -gff \
   -dir ${OUTDIR} \
